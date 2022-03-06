@@ -22,11 +22,21 @@
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^12.3.5",
     "prettier": "^2.5.1",
     "webpack": "^4.46.0",
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
     "css-loader": "^5.2.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix"
   }
 }
